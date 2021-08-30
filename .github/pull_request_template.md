@@ -1,12 +1,27 @@
 ## 🔥 결과
 
-- 배포한 CloudFront 접근 경로: https://d1raor9vjuxux6.cloudfront.net/
-- 개선 전후 성능 측정 결과
-    - 개선 전 (S3)
-    ![image](https://user-images.githubusercontent.com/32982670/131308749-c38c32ed-9cd0-40bb-8135-091fa912a59b.png)
+배포한 CloudFront 접근 경로: https://d1raor9vjuxux6.cloudfront.net/
 
-    - 개선 후 (CloudFront)
-    ![image](https://user-images.githubusercontent.com/32982670/131308850-000fe291-f648-4438-8583-72fe080dffce.png)
+<br>
+
+### 개선 전후 성능 측정 결과
+
+- lighthouse 점수 : **53 -> 100**
+
+![image](https://user-images.githubusercontent.com/32982670/131308850-000fe291-f648-4438-8583-72fe080dffce.png)
+
+- 프랑스 파리에서 Fast 3G 환경으로 접속했을 때 
+  - 첫번째 접속시 LCP : **81.691s -> 2.813s**
+  - 두번째 접속시 LCP : **2.183s -> 0.285s**
+
+![image](https://user-images.githubusercontent.com/32982670/131311526-11df4656-566e-4af7-bdc6-c8bc1920354b.png)
+
+- Home 페이지에서 불러오는 스크립트 리소스 크기: **797KB -> 51.5KB**
+
+![image](https://user-images.githubusercontent.com/32982670/131313611-b68155b4-e207-43e1-98ea-4d0566042783.png)
+
+- 히어로 이미지 크기: **10.1MB -> 114KB**
+
 
 
 ## ✅ 개선 작업 목록
