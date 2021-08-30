@@ -33,8 +33,8 @@
   - HTML, CSS, Javascript 압축 및 난독화
   - CSS 코드를 자바스크립트 번들에 포함시키지 않고 별도 파일로 분리(번들과 따로 요청되도록 만듬)
   - CloudFront 에서 자원을 전달할 때 gzip(구형 브라우저), brotli(신형 브라우저) 형식으로 압축시킨채 전달
-    ![image](https://user-images.githubusercontent.com/32982670/131369320-1973acc8-3e82-492d-b635-1bb7cd7fdccc.png)
-    ![image](https://user-images.githubusercontent.com/32982670/131369384-1a279ff1-6a40-4838-9dec-4084423f83e6.png)
+  ![image](https://user-images.githubusercontent.com/32982670/131369320-1973acc8-3e82-492d-b635-1bb7cd7fdccc.png)
+  ![image](https://user-images.githubusercontent.com/32982670/131369384-1a279ff1-6a40-4838-9dec-4084423f83e6.png)
 
 - [x] 필요없는 요청 없애기
   - 폰트 다운로드를 위해 불필요하게 다운로드 했던 font-face 정보들이 담긴 CSS 파일을 요청하지 않도록 수정
@@ -56,7 +56,8 @@
 **3 같은 건 매번 새로 요청하지 않기**
 - [x] CloudFront 캐시 설정
   - 최대한 자원 자체의 캐싱 정책을 따르되 Cache-Control 헤더 속성이 없어서 캐싱 정책이 적용되지 않은 파일엔 24시간의 TTL이 적용되도록 설정
-    ![image](https://user-images.githubusercontent.com/32982670/131369921-e1efae85-b106-412b-b3ad-fe321690e6b4.png)
+  
+![image](https://user-images.githubusercontent.com/32982670/131369921-e1efae85-b106-412b-b3ad-fe321690e6b4.png)
 
 - [x] GIPHY의 trending API를 Search 페이지에 들어올 때마다 새로 요청하지 않아야 한다.
   - gif 정보들을 담는 리스트를 전역 상태로 전환(이전 검색 결과를 페이지 컴포넌트가 언마운트 된 이후에도 유지하도록 수정)
@@ -64,7 +65,9 @@
 
 **4 중요한 자원은 미리 다운로드 받기**
 - [x] hero.webp, JosefinSans-Italic.woff2 파일에 preload 적용
-  ![image](https://user-images.githubusercontent.com/32982670/131369627-7b24555c-494b-41aa-a183-2a7ca8cdd2ac.png)
+
+![image](https://user-images.githubusercontent.com/32982670/131369627-7b24555c-494b-41aa-a183-2a7ca8cdd2ac.png)
+
 - [x] Home 페이지 LCP 이후 Search 페이지에 필요한 chunk 자바스크립트 파일 미리 다운로드
 
 **5 최소한의 변경만 일으키기**
